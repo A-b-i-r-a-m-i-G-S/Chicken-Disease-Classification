@@ -23,7 +23,8 @@ list_of_files = [
     "params.yaml",
     "requirements.txt",
     "setup.py",
-    "research/trials.ipynb" #experiments are performed before writing components
+    "research/trials.ipynb", #experiments are performed before writing components
+    "templates/index.html"
 ] 
 
 for filepath in list_of_files:
