@@ -18,4 +18,4 @@ logging.basicConfig(
     ]
 )
 
-logger.logging.getLogger("ChickenLogger")
+logger = logging.getLogger("Chicken_Disease_ClassificationLogger")
