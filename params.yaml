@@ -1,1 +1,8 @@
-key: val
+AUGMENTATION: True
+IMAGE_SIZE: [224,224,3]
+BATCH_SIZE: 16
+INCLUDE_TOP: False    #uses pre-trained weights
+EPOCHS: 10
+CLASSES: 2            # healthy or disease
+WEIGHTS: imagenet
+LEARNING_RATE: 0.01
