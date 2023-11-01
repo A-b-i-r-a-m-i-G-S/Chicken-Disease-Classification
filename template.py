@@ -11,20 +11,20 @@ project_name = "Chicken_Disease_Classification"
 list_of_files = [
     ".github/workflows/.gitkeep", #stores the main.yaml file that contains CI/CD commands
     f"src/{project_name}/__init__.py", # creates a package (constructor)
-    f"src/{project_name}/components/__init__.py",
-    f"src/{project_name}/utils/__init__.py",
-    f"src/{project_name}/config/__init__.py",
-    f"src/{project_name}/config/configuration.py",
-    f"src/{project_name}/pipeline/__init__.py",
-    f"src/{project_name}/entity/__init__.py",
-    f"src/{project_name}/constants/__init__.py",
+    f"src/{project_name}/components/__init__.py", #components of the pipeline
+    f"src/{project_name}/utils/__init__.py", #commmonly used functions (utility functions)
+    f"src/{project_name}/config/__init__.py", 
+    f"src/{project_name}/config/configuration.py", #configuration functions
+    f"src/{project_name}/pipeline/__init__.py", #pipeline stages
+    f"src/{project_name}/entity/__init__.py", #configuration classes
+    f"src/{project_name}/constants/__init__.py", #constants
     "config/config.yaml",
     "dvc.yaml",
-    "params.yaml",
-    "requirements.txt",
+    "params.yaml", #model hyperparameters
+    "requirements.txt", #dependencies
     "setup.py",
     "research/trials.ipynb", #experiments are performed before writing components
-    "templates/index.html"
+    "templates/index.html" #front-end interface
 ] 
 
 for filepath in list_of_files:

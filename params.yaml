@@ -5,4 +5,4 @@ INCLUDE_TOP: False    #uses pre-trained weights
 EPOCHS: 10
 CLASSES: 2            # healthy or disease
 WEIGHTS: imagenet
-LEARNING_RATE: 0.01
+LEARNING_RATE: 0.001
