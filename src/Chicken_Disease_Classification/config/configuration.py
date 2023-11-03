@@ -74,3 +74,14 @@ class ConfigurationManager:
         )
 
         return training_config
+
+    def get_evaluation_config(self) -> EvaluationConfig:
+        eval_config = EvaluationConfig(
+            model_path = Path("artifacts/training/model.keras"),
+            training_data = Path("artifacts/data_ingestion/Chicken-fecal-images"),
+            all_params = self.params,
+            params_image_size = self.params.IMAGE_SIZE,
+            params_batch_size = self.params.BATCH_SIZE
+        )
+
+        return eval_config
