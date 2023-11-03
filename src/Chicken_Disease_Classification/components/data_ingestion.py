@@ -1,9 +1,10 @@
-from Chicken_Disease_Classification.entity import DataIngestionConfig
+from Chicken_Disease_Classification.entity.config_entity import DataIngestionConfig
 from Chicken_Disease_Classification import logger
 import os
 import urllib.request as request
+import zipfile
 from pathlib import Path
-from Chicken_Disease_Classification.utils import get_size
+from Chicken_Disease_Classification.utils.common import get_size
 
 class DataIngestion:
     def __init__(self, config: DataIngestionConfig):

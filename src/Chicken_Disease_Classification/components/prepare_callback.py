@@ -1,4 +1,4 @@
-from Chicken_Disease_Classification.entity import PrepareCallbacksConfig
+from Chicken_Disease_Classification.entity.config_entity import PrepareCallbacksConfig
 import tensorflow as tf
 import time
 import os
@@ -18,7 +18,7 @@ class PrepareCallback:
     def _create_ckpt_callbacks(self):
         return tf.keras.callbacks.ModelCheckpoint(
             filepath=self.config.checkpoint_model_filepath,
-            save_best_only = True
+            save_best_only = False
         )
 
     def get_tb_ckpt_callbacks(self):

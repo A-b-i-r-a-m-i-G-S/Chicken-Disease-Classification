@@ -1,6 +1,7 @@
 from Chicken_Disease_Classification.constants import *
 from Chicken_Disease_Classification.utils.common import read_yaml, create_directories
-from Chicken_Disease_Classification.entity import *
+from Chicken_Disease_Classification.entity.config_entity import *
+import os
 
 class ConfigurationManager:
     def __init__(self, config_filepath = CONFIG_FILE_PATH, params_filepath = PARAMS_FILE_PATH):

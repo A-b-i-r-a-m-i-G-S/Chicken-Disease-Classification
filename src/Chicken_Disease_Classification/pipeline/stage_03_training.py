@@ -1,11 +1,12 @@
 from Chicken_Disease_Classification.config.configuration import ConfigurationManager
-from Chicken_Disease_Classification.components.prepare_callbacks import PrepareCallback
+from Chicken_Disease_Classification.components.prepare_callback import PrepareCallback
 from Chicken_Disease_Classification.components.training import Training
 from Chicken_Disease_Classification import logger
 
 STAGE_NAME = "Training"
 
 class ModelTrainingPipeline:
+    # class
     def __init__(self):
         pass
 
