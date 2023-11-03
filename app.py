@@ -26,7 +26,7 @@ def home():
 @app.route("/train", methods=['GET','POST'])
 @cross_origin()
 def trainRoute():
-    os.system("python main.py")
+    os.system("dvc repro")
     return "Training done successfully!"
 
 
@@ -42,4 +42,7 @@ def predictRoute():
 
 if __name__ == "__main__":
     clApp = ClientApp()
-    app.run(host='0.0.0.0', port=8080)
+    # localhost
+    # app.run(host='0.0.0.0', port=8080)
+    # azure
+    app.run(host='0.0.0.0', port=80)
