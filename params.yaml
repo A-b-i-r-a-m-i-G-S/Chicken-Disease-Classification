@@ -1,8 +1,8 @@
-AUGMENTATION: True
+AUGMENTATION: False
 IMAGE_SIZE: [224,224,3]
-BATCH_SIZE: 16
+BATCH_SIZE: 8
 INCLUDE_TOP: False    #uses pre-trained weights
 EPOCHS: 10
-CLASSES: 2            # healthy or disease
+CLASSES: 2          # healthy, cocciodiosis
 WEIGHTS: imagenet
 LEARNING_RATE: 0.001

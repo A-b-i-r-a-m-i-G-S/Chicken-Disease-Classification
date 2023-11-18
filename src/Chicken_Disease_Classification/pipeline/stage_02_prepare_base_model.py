@@ -5,7 +5,7 @@ from Chicken_Disease_Classification import logger
 STAGE_NAME = "Prepare Base Model"
 
 class PrepareBaseModelTrainingPipeline:
-    # /class
+    # 64% max accuracy
     def __init__(self):
         pass
 

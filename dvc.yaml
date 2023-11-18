@@ -5,7 +5,8 @@ stages:
       - src/Chicken_Disease_Classification/pipeline/stage_01_data_ingestion.py
       - config/config.yaml
     outs:
-      - artifacts/data_ingestion/Chicken-fecal-images
+      - artifacts/data_ingestion/Images
+        cache: false
 
 
   prepare_base_model:
@@ -30,7 +31,7 @@ stages:
       - src/Chicken_Disease_Classification/pipeline/stage_03_training.py
       - src/Chicken_Disease_Classification/components/prepare_callback.py
       - config/config.yaml
-      - artifacts/data_ingestion/Chicken-fecal-images
+      - artifacts/data_ingestion/Images
       - artifacts/prepare_base_model
     params:
       - IMAGE_SIZE
@@ -38,7 +39,7 @@ stages:
       - BATCH_SIZE
       - AUGMENTATION
     outs:
-      - artifacts/training/model.keras
+      - artifacts/training/model.h5
 
 
   
@@ -48,11 +49,11 @@ stages:
     deps:
       - src/Chicken_Disease_Classification/pipeline/stage_04_evaluation.py
       - config/config.yaml
-      - artifacts/data_ingestion/Chicken-fecal-images
-      - artifacts/training/model.keras
+      - artifacts/data_ingestion/Images
+      - artifacts/training/model.h5
     params:
       - IMAGE_SIZE
       - BATCH_SIZE
     metrics:
-    - scores.json:
+      - scores.json:
         cache: false
