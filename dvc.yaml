@@ -6,8 +6,6 @@ stages:
       - config/config.yaml
     outs:
       - artifacts/data_ingestion/Images
-        cache: false
-
 
   prepare_base_model:
     cmd: python src/Chicken_Disease_Classification/pipeline/stage_02_prepare_base_model.py
@@ -56,4 +54,4 @@ stages:
       - BATCH_SIZE
     metrics:
       - scores.json:
-        cache: false
+          cache: false
